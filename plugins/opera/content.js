@@ -113,11 +113,20 @@ let blockedPages = [
 var currentUrl = window.location.href;
 let now = new Date();
 
-for (const blockedPage of blockedPages) {
-  if (currentUrl.startsWith(blockedPage.pageUrl) && (!blockedPage.blockTime ||  blockedPage.blockTime.shouldBeBlocked(now))) {
-    blockPage();
+chrome.storage.sync.get("isBlocking", function(data){
+  if (data.isBlocking) {
+    console.log("Pages are blocked. Check if current page should be blocked");
+    for (const blockedPage of blockedPages) {
+      if (currentUrl.startsWith(blockedPage.pageUrl) && (!blockedPage.blockTime || blockedPage.blockTime.shouldBeBlocked(now))) {
+        blockPage();
+      }
+    }    
   }
-}
+  else
+  {
+    console.log("Pages are not blocked");
+  }
+});
 
 function blockPage() {
   //TODO: load nice template

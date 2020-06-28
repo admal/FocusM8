@@ -14,8 +14,10 @@ The development has just started.
 * website usage time tracking
 
 ## Milestone 1.1
+* websites list to later select (default websites, possiblity to add more pages)
 * default website categories to block
 * more time range options (multiple time ranges configuration) --already possible in code only new configuration options
+* block for X minutes (user wants to work out of schedule, user clicks start blocking, enters time and selects webpages or provides links
 
 # Later releases
 * daily/weekly/monthly/yearly raports about your stats

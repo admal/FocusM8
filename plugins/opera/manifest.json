@@ -1,15 +1,30 @@
 {
-	"manifest_version": 2,
-	"name": "FocusM8",
-	"description": "My focus app to bring my productivity to the next level!",
-	"version": "1.0",
-    "content_scripts": [{
-        "js": ["content.js"],
-        "matches": ["http://*/*", "https://*/*"]
-      }],
-	"browser_action": {
-		"default_icon": "hello-button.png",
-		"default_title": "FocusM8!",
-        "default_popup": "button-modal.html"
-	}
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "FocusM8",
+  "description": "My focus app to bring my productivity to the next level!",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon32.png",
+    "default_title": "FocusM8!",
+    "default_popup": "button-modal.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
 }
