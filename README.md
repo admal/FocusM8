@@ -9,7 +9,10 @@ The development has just started.
 * set time range per weekdays for blocked websites
 * block certain search phrases from google and other search engines
 * statistics: how many you have tried enter page and when
-* configuration files  
+* configuration files
+* website usage time tracking
+* default website categories to block
+
 
 *TODO: think of more*
 # Ideas and plans
